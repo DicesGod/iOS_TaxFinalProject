@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="mOf-1b-t2H">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quebec Tax Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6a8-Ar-XwE">
+                                <rect key="frame" x="63.5" y="76" width="287.5" height="48"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wmE-IQ-UMU">
+                                <rect key="frame" x="32" y="156" width="350" height="102"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your salary:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Rn-eq-rTX" customClass="SalaryTextField" customModule="tax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="47"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your province:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Zg-5C-uy8" customClass="SalaryTextField" customModule="tax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55" width="350" height="47"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Tax: $0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iss-lJ-sI2" customClass="TaxLabel" customModule="tax" customModuleProvider="target">
+                                <rect key="frame" x="32" y="290" width="350" height="30.5"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
+                                <color key="textColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ar4-vZ-MNg">
+                                <rect key="frame" x="32" y="352.5" width="350" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ar4-vZ-MNg" secondAttribute="trailing" constant="32" id="9FB-eQ-FEf"/>
+                            <constraint firstItem="Ar4-vZ-MNg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="E6d-r1-qBF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wmE-IQ-UMU" secondAttribute="trailing" constant="32" id="LAp-Cb-FPb"/>
+                            <constraint firstItem="mOf-1b-t2H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NXr-NP-kkG"/>
+                            <constraint firstItem="mOf-1b-t2H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QxA-ua-0im"/>
+                            <constraint firstItem="wmE-IQ-UMU" firstAttribute="top" secondItem="6a8-Ar-XwE" secondAttribute="bottom" constant="32" id="Rhh-Za-abI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mOf-1b-t2H" secondAttribute="trailing" id="SHK-iz-GAU"/>
+                            <constraint firstItem="wmE-IQ-UMU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Y2d-Kr-aTc"/>
+                            <constraint firstItem="6a8-Ar-XwE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="gGq-WX-uUw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iss-lJ-sI2" secondAttribute="trailing" constant="32" id="iDo-0z-3T7"/>
+                            <constraint firstItem="iss-lJ-sI2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="iG4-7c-tDe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mOf-1b-t2H" secondAttribute="bottom" id="j3j-GI-vOs"/>
+                            <constraint firstItem="6a8-Ar-XwE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="omV-Yx-SoK"/>
+                            <constraint firstItem="Ar4-vZ-MNg" firstAttribute="top" secondItem="iss-lJ-sI2" secondAttribute="bottom" constant="32" id="ozk-FG-MZc"/>
+                            <constraint firstItem="iss-lJ-sI2" firstAttribute="top" secondItem="wmE-IQ-UMU" secondAttribute="bottom" constant="32" id="wT2-M7-Z4l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="provincePicker" destination="Ar4-vZ-MNg" id="KWO-t8-MOZ"/>
+                        <outlet property="provinceTextField" destination="7Zg-5C-uy8" id="cmI-eF-mbS"/>
+                        <outlet property="salaryTextField" destination="6Rn-eq-rTX" id="nNe-xn-uqZ"/>
+                        <outlet property="taxLabel" destination="iss-lJ-sI2" id="8Qr-lj-I1z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="236" height="418"/>
+    </resources>
+</document>
